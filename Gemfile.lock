@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:msorc/fyber_api_wrapper.git
+  revision: 1030d2f2666a3c6ca83d0699521feb342a450b48
+  specs:
+    fyber_api_wrapper (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -182,6 +188,7 @@ DEPENDENCIES
   byebug
   capybara-webkit (~> 1.4.1)
   coffee-rails (~> 4.1.0)
+  fyber_api_wrapper!
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.1)
