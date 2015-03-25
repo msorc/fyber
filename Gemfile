@@ -48,3 +48,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :test do
+  gem 'shoulda', '~> 3.5.0'
+end
+
