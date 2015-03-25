@@ -1,0 +1,7 @@
+<h1>ApiRequest#new</h1>
+<%= form_for @api_request, url: api_request_create_path do |f| %>
+  <%= f.text_field :uid %>
+  <%= f.text_field :pub0 %>
+  <%= f.text_field :page %>
+  <%= f.submit "Create" %>
+<% end %>
