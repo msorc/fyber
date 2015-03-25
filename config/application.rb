@@ -22,5 +22,14 @@ module Fyber
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # fyber config
+    config.x.fyber.appid = "157"
+    config.x.fyber.format = "json"
+    config.x.fyber.device_id = "2b6f0cc904d137be2e1730235f5664094b83"
+    config.x.fyber.locale = "de"
+    config.x.fyber.ip = "109.235.143.113"
+    config.x.fyber.offer_types = "112"
+    config.x.fyber.api_Key = "b07a12df7d52e6c118e5d47d3f9e60135b109a1f"
   end
 end
