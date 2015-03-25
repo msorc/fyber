@@ -1,0 +1,41 @@
+<table>
+  <tr><th>Link:</th><td><%= offer.link %></td></tr>
+  <tr><th>Title:</th><td><%= offer.title %></td></tr>
+  <tr><th>Offer ID:</th><td><%= offer.offer_id %></td></tr>
+  <tr><th>Teaser:</th><td><%= offer.teaser %></td></tr>
+  <tr><th>Required Actions:</th><td><%= offer.required_actions %></td></tr>
+  <tr>
+    <th rowspan="2">Thumbnail:</th>
+    <td><span class="response_label">lowres:</span><%= offer.thumbnail.lowres %></td>
+  </tr>
+  <tr>
+    <td><span class="response_label">hires:</span><%= offer.thumbnail.hires %></td>
+  </tr>
+
+  <% if offer.offer_types.size > 0 %>
+    <tr>
+      <th rowspan="<%= offer.offer_types.size %>">Offer Types:</th>
+      <td>
+        <span class="response_label">offer_type_id:</span><%= offer.offer_types[0].offer_type_id %>
+        <span class="response_label">readable:</span><%= offer.offer_types[0].readable %>
+      </td>
+    </tr>
+    <% offer.offer_types[1..-1].each do |offer_type| %>
+      <tr>
+        <td>
+          <span class="response_label">offer_type_id:</span><%= offer_type.offer_type_id %>
+          <span class="response_label">readable:</span><%= offer_type.readable %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+
+  <tr><th>Payout:</th><td><%= offer.payout %></td></tr>
+  <tr>
+    <th rowspan="2">Time to Payout:</th>
+    <td><span class="response_label">amount:</span><%= offer.time_to_payout.amount %></td>
+  </tr>
+  <tr>
+    <td><span class="response_label">readable:</span><%= offer.time_to_payout.readable %></td>
+  </tr>
+</table>

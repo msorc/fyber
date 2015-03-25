@@ -1,7 +1,22 @@
-<h1>ApiRequest#new</h1>
+<h1>Offer request details</h1>
+<p>Fill the requiered details</p>
+<% @api_request.errors.full_messages.each do |m| %>
+  <ul class="error_message">
+    <li><%= m %>
+  </ul>
+<% end %>
 <%= form_for @api_request, url: api_request_create_path do |f| %>
-  <%= f.text_field :uid %>
-  <%= f.text_field :pub0 %>
-  <%= f.text_field :page %>
+  <p>
+    <%= f.label :uid %><br/>
+    <%= f.text_field :uid %>
+  </p>
+  <p>
+    <%= f.label :pub0 %><br/>
+    <%= f.text_field :pub0 %>
+  </p>
+  <p>
+    <%= f.label :page %><br/>
+    <%= f.text_field :page %>
+  </p>
   <%= f.submit "Create" %>
 <% end %>

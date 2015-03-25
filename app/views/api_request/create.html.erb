@@ -1,4 +1,23 @@
-<h1>ApiRequest#create</h1>
-<p>Find me in app/views/api_request/create.html.erb</p>
-<%= @offers.count %>
-<%= @offers.code %>
+<h1>API Response</h1>
+<p><%= link_to "Go back", api_request_new_path %></p>
+<h2>Response info</h2>
+<p>
+  <span class="response_label">Code:</span> <%= @offers.code %><br/>
+  <span class="response_label">Message:</span> <%= @offers.message %><br/>
+  <span class="response_label">Count:</span> <%= @offers.count %><br/>
+  <span class="response_label">Pages:</span> <%= @offers.pages %>
+</p>
+<h2>Information</h2>
+<p>
+  <span class="response_label">app_name:</span> <%= @offers.information.app_name %><br/>
+  <span class="response_label">appid:</span> <%= @offers.information.appid %><br/>
+  <span class="response_label">virtual_currency:</span> <%= @offers.information.virtual_currency %><br/>
+  <span class="response_label">country:</span> <%= @offers.information.country %><br/>
+  <span class="response_label">language:</span> <%= @offers.information.language %><br/>
+  <span class="response_label">support_url:</span> <%= @offers.information.support_url %>
+</p>
+<h2>Offers</h2>
+<% @offers.each do |offer| %>
+  <%= render 'offer', offer: offer %>
+<% end %>
+<p><%= link_to "Go back", api_request_new_path %></p>

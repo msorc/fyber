@@ -8,8 +8,14 @@ class ApiRequestController < ApplicationController
 
     respond_to do |format|
       if @api_request.valid?
-        @offers = FyberApiWrapper.get_offers(api_request_params)
-        format.html
+        begin
+          @offers = FyberApiWrapper.get_offers(api_request_params)
+        rescue Exception => e
+          @error_message = e.message
+          format.html { render :error }
+        else
+          format.html
+        end
       else
         format.html { render :new }
       end

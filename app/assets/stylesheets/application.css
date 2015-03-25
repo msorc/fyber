@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+.field_with_errors label {
+  color: red;
+}
+
+.field_with_errors input {
+  padding: 2px;
+  border: 1px solid red;
+}
+
+.error_message {
+  color: red;
+}
+
+.response_label {
+  font-style: italic;
+}
+
+table {
+  margin-bottom: 5px;
+  width: 100%
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+th {
+  width: 200px;
+}
