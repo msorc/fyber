@@ -5,4 +5,5 @@ FyberApiWrapper.configure do |config|
   config.ip = Rails.configuration.x.fyber.ip
   config.offer_types = Rails.configuration.x.fyber.offer_types
   config.api_key = Rails.configuration.x.fyber.api_key
+  config.locale = Rails.configuration.x.fyber.locale
 end

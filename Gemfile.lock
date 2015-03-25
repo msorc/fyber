@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:msorc/fyber_api_wrapper.git
-  revision: 1030d2f2666a3c6ca83d0699521feb342a450b48
+  revision: 9b6a0e84a14238fc9360d6a9decb8b55d34bb8c9
   specs:
     fyber_api_wrapper (0.1.0)
 
